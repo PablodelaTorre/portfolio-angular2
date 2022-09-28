@@ -1,0 +1,27 @@
+input {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 20vw;
+    transition: 0.3s;
+    border: none;
+    border-radius: 2px;
+}
+
+input:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 650px) {
+    input {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 500px) {
+    input {
+        width: 40vw;
+    }
+}
