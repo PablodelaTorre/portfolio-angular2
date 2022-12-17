@@ -9,6 +9,24 @@ input {
     border-radius: 2px;
 }
 
+form button {
+    cursor:pointer;
+    width: 15vw;
+    border-radius: 1rem;
+    background-color: rgba(231, 234, 234, 0.85);
+    color: black;
+    border: none;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 40vw;
+    margin-right: auto;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
 input:hover {
     transform: scale(1.05);
 }
