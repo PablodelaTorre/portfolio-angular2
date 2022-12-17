@@ -10,6 +10,7 @@ import { TecnologiasComponent } from './components/tecnologias/tecnologias.compo
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TecnologiasBackComponent } from './components/tecnologias-back/tecnologias-back.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { TecnologiasBackComponent } from './components/tecnologias-back/tecnolog
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
