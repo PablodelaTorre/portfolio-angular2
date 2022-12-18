@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
     <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
     <!-- <div *ngIf="Nombre?.errors && Nombre?.touched">
         <p *ngIf="Nombre?.hasError('required')" class="text-danger">Debe ingresar un nombre</p>

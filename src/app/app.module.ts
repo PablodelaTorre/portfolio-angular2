@@ -11,6 +11,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { TecnologiasBackComponent } from './components/tecnologias-back/tecnologias-back.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

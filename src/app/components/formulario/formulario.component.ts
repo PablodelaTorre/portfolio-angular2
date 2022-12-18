@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { EnvioFormularioService } from 'src/app/servicios/envio-formulario.service';
 
 @Component({
   selector: 'app-formulario',
@@ -8,7 +9,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder, private envioFormularioService:EnvioFormularioService) {
 
     this.form=this.formBuilder.group(
       {
@@ -38,6 +39,14 @@ export class FormularioComponent implements OnInit {
   
   get Telefono(){
     return this.form.get('telefono')
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    this.envioFormularioService.IniciarSesion(this.form.value).subscribe(data=>{
+      console.log("DATA:" + JSON.stringify(data))
+      
+    })
   }
 
 }
