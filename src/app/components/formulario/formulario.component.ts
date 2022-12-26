@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 import { EnvioFormularioService } from 'src/app/servicios/envio-formulario.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -9,7 +10,7 @@ import { EnvioFormularioService } from 'src/app/servicios/envio-formulario.servi
 })
 export class FormularioComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder, private envioFormularioService:EnvioFormularioService) {
+  constructor(private formBuilder:FormBuilder, private envioFormularioService:EnvioFormularioService, private ruta:Router) {
 
     this.form=this.formBuilder.group(
       {
@@ -45,8 +46,12 @@ export class FormularioComponent implements OnInit {
     event.preventDefault;
     this.envioFormularioService.IniciarSesion(this.form.value).subscribe(data=>{
       console.log("DATA:" + JSON.stringify(data))
-      
+      this.ruta.navigate(['/exito'])  
     })
+  }
+
+  redireccionar(){
+    
   }
 
 }

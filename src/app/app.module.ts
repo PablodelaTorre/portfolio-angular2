@@ -12,6 +12,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TecnologiasBackComponent } from './components/tecnologias-back/tecnologias-back.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { ExitoComponent } from './components/exito/exito.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { HttpClientModule } from '@angular/common/http';
     TecnologiasComponent,
     FormularioComponent,
     FooterComponent,
-    TecnologiasBackComponent
+    TecnologiasBackComponent,
+    ExitoComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    RouterModule,
     HttpClientModule
 
   ],
